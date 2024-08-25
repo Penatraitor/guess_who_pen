@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .joke-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            
+        }
+        button, .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px auto;
+            margin-inline: auto;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 44%;
+            
+            
+        }
+        .joke {
+            margin-top: 10px;
+            font-style: italic;
+            display: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Joke Host</h1>
+    
+    <div class="joke-container" >
+        <button onclick="revealJoke('joke1')">Hint 1</button>
+        <p id="joke1" class="joke">You see me when you least expect it.</p>
+    </div>
+
+    <div class="joke-container">
+        <button onclick="revealJoke('joke2')">Hint 2</button>
+        <p id="joke2" class="joke">I stamp by feet and let out my voice, who am I?</p>
+    </div>
+
+    <div class="joke-container">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button" target="_blank">Hint 3</a>
+    </div>
+
+    <script>
+        function revealJoke(jokeId) {
+            const joke = document.getElementById(jokeId);
+            if (joke.style.display === "none" || joke.style.display === "") {
+                joke.style.display = "block";
+            } else {
+                joke.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
